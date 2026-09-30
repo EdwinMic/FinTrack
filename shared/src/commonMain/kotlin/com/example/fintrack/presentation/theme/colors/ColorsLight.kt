@@ -7,7 +7,7 @@ package com.example.fintrack.presentation.theme.colors
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF1A70ED)
-val onPrimaryLight = Color(0xFFFFFFFF)
+val onPrimaryLight = Color(0xFF0F459E)
 val primaryContainerLight = Color(0xFFE6F4F4)
 val onPrimaryContainerLight = Color(0xFF637070)
 val secondaryLight = Color(0xFFA3A3A3)
@@ -62,6 +62,11 @@ val backgroundYellowLight = Color(0xFFFFB700)
 val backgroundBlueLight = Color(0xFF0066FF)
 val dividerLight = Color(0xFFEBEFF9)
 val backgroundProgressIndicatorLight = Color(0x80898989)
+
+//Card
+
+val cardLoginBack = Color(0xFF1A5CBF)
+val cardSubLoginBack = Color(0xFF73B0FF)
 
 // --- Light color group ---
 val lightModeAppColors = AppColors(
@@ -124,4 +129,6 @@ val lightModeAppColors = AppColors(
     ),
     divider = dividerLight,
     backgroundProgressIndicator = backgroundProgressIndicatorLight,
+    cardLoginBack = cardLoginBack,
+    cardSubLoginBack = cardSubLoginBack
 )

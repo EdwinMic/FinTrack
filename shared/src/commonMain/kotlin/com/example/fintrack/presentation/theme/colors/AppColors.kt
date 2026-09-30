@@ -52,6 +52,9 @@ data class AppColors(
     val backgrounds: ColorBackgrounds = ColorBackgrounds(),
     val divider: Color = Color.Unspecified,
     val backgroundProgressIndicator: Color = Color.Unspecified,
+    val cardLogin: Color = Color.Unspecified,
+    val cardLoginBack: Color = Color.Unspecified,
+    val cardSubLoginBack: Color = Color.Unspecified,
 ) {
     fun asMaterialColorScheme(isDark: Boolean): ColorScheme =
         if (isDark) {

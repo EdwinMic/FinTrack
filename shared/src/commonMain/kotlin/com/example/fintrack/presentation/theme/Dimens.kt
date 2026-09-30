@@ -9,6 +9,7 @@ object Dimens {
 
     // ------ Text size ------
     val textSizeExtraSmall: TextUnit = 12.sp
+    val textSizeSmall13: TextUnit = 13.sp
     val textSizeSmall: TextUnit = 14.sp
     val textSizeNormal: TextUnit = 16.sp
     val textSizeMedium: TextUnit = 20.sp
