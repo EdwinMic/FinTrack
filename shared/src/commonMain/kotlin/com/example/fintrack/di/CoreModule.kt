@@ -1,26 +1,24 @@
 package com.example.fintrack.di
 
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import org.koin.core.context.startKoin
-import org.koin.core.module.dsl.singleOf
-import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
+import com.example.fintrack.data.local.database.AppDatabase
+import com.example.fintrack.data.local.database.getDatabaseBuilder
 
 val dispatcherModule = module {
     single<CoroutineDispatcher> { Dispatchers.IO }
 }
 
 val databaseModule = module {
-    /*single<AppDatabase> {
+    single<AppDatabase> {
         getDatabaseBuilder()
             .setQueryCoroutineContext(Dispatchers.IO)
             .build()
-    }*/
+    }
 }
 
 val dataStoreModule = module {
