@@ -1,4 +1,4 @@
-package com.example.fintrack.presentation.ui.login.ui
+package com.example.fintrack.presentation.ui.register.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -6,22 +6,20 @@ import com.example.fintrack.presentation.component.container.SafeScreenContainer
 import com.example.fintrack.presentation.component.container.SafeScreenContainerTest
 
 @Composable
-fun LoginScreen(
-    navigateToHome: () -> Unit = {},
-    navigateToRegister: () -> Unit = {},
-    ) {
-
+fun RegisterScreen(
+    //navigateToRegister: () -> Unit = {}
+) {
     SafeScreenContainer {
-        LoginContainer(
-            navigateToHome = navigateToHome,
-            navigateToRegister = navigateToRegister,
+        RegisterContainer(
+            //navigateToRegister = navigateToRegister,
         )
     }
 }
+
 @Preview(showBackground = true)
 @Composable
-private fun LoginPreviewScreen() {
+private fun PreviewRegisterContainer(){
     SafeScreenContainerTest {
-        LoginScreen()
+        RegisterContainer()
     }
 }

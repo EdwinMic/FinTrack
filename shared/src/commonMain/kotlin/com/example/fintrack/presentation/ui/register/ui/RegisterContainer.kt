@@ -1,4 +1,4 @@
-package com.example.fintrack.presentation.ui.home.ui
+package com.example.fintrack.presentation.ui.register.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,11 +15,11 @@ import com.example.fintrack.presentation.component.container.SafeScreenContainer
 import com.example.fintrack.presentation.component.text.TextBigBold
 import com.example.fintrack.presentation.theme.AppTheme
 import com.example.fintrack.presentation.theme.Dimens
-import org.jetbrains.compose.resources.stringResource
+
 
 @Composable
-fun HomeContainer(
-    navigateToHome: () -> Unit = {}
+fun RegisterContainer(
+    //navigateToRegister: () -> Unit = {}
 ) {
     val scrollState = rememberScrollState()
     Column(
@@ -36,7 +36,7 @@ fun HomeContainer(
         TextBigBold(
             modifier = Modifier.fillMaxWidth(),
             color = AppTheme.colors.text.black,
-            text = "Home View",
+            text = "Register",
         )
     }
 }
@@ -45,8 +45,8 @@ fun HomeContainer(
     showBackground = true
 )
 @Composable
-private fun PreviewHomeContainer() {
+private fun PreviewRegisterContainer() {
     SafeScreenContainerTest {
-        HomeContainer()
+        RegisterContainer()
     }
 }
