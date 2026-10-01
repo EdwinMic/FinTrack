@@ -1,5 +1,7 @@
 package com.example.fintrack.di
 
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -8,6 +10,9 @@ import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 import com.example.fintrack.data.local.database.AppDatabase
 import com.example.fintrack.data.local.database.getDatabaseBuilder
+import com.example.fintrack.data.local.datastore.AppDataStore
+import com.example.fintrack.data.local.datastore.createDataStore
+import org.koin.core.module.dsl.singleOf
 
 val dispatcherModule = module {
     single<CoroutineDispatcher> { Dispatchers.IO }
@@ -22,8 +27,8 @@ val databaseModule = module {
 }
 
 val dataStoreModule = module {
-    /*single<DataStore<Preferences>> { createDataStore() }
-    singleOf(constructor = ::AppDataStore)*/
+    single<DataStore<Preferences>> { createDataStore() }
+    singleOf(constructor = ::AppDataStore)
 }
 
 val databaseDaoModule = module {
