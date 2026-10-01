@@ -12,6 +12,7 @@ import com.example.fintrack.data.local.database.AppDatabase
 import com.example.fintrack.data.local.database.getDatabaseBuilder
 import com.example.fintrack.data.local.datastore.AppDataStore
 import com.example.fintrack.data.local.datastore.createDataStore
+import com.example.fintrack.data.network.client.createHttpClient
 import org.koin.core.module.dsl.singleOf
 
 val dispatcherModule = module {
@@ -36,7 +37,7 @@ val databaseDaoModule = module {
 }
 
 val networkModule = module {
-    //single { createHttpClient(appDataStore = get()) }
+    single { createHttpClient(appDataStore = get()) }
 }
 
 val dataSourceRemoteModule = module {
