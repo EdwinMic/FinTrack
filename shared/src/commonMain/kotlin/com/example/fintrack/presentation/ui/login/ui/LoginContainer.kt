@@ -48,6 +48,7 @@ fun LoginContainer(
     onPasswordChange: (String) -> Unit = {},
     passwordVisible: Boolean = false,
     onPasswordVisibleChange: (Boolean) -> Unit = {},
+    onLoginClick: () -> Unit = {},
 ) {
     val scrollState = rememberScrollState()
     val focusManager = LocalFocusManager.current
@@ -125,7 +126,7 @@ fun LoginContainer(
         )
         Spacer(modifier = Modifier.height(Dimens.padding24))
         ButtonCustom(
-            onClick = navigateToRegister,
+            onClick = onLoginClick,
             modifier = Modifier.fillMaxWidth(),
             backgroundButton = AppTheme.colors.primary,
             textColor = AppTheme.colors.backgrounds.white,

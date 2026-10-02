@@ -1,9 +1,9 @@
 package com.example.fintrack.data.local.model.user
 
-import androidx.room3.Entity
-import androidx.room3.PrimaryKey
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Entity(tableName = "tbl_user")
+@Entity(tableName = "users")
 data class UserEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String?,

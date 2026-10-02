@@ -18,7 +18,10 @@ data object LoginNavigation : Screen {
             },
             navigateToRegister = {
                 navigator.push(item = RegisterNavigation)
-            }
+            },
+            onLoginSuccess = {
+                navigator.replaceAll(item = HomeNavigation)
+            },
         )
     }
 }

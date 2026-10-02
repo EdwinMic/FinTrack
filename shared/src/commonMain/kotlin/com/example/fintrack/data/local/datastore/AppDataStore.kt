@@ -9,7 +9,9 @@ import com.example.fintrack.utils.constants.Constants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
+import org.koin.core.annotation.Single
 
+@Single
 class AppDataStore(
     private val dataStore: DataStore<Preferences>
 ) {

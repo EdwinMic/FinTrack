@@ -1,0 +1,9 @@
+package com.example.fintrack.domain.model.user
+
+data class UserModel(
+    val id: String,
+    val full_name: String,
+    val email: String,
+    val phone: String,
+    val role: String,
+)
